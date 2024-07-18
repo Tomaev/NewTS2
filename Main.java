@@ -67,10 +67,12 @@ public class Main {
                             }
                         }
                     }else if(valOptional == '1' || valOptional == '2' || valOptional == '3' || valOptional == '4' || valOptional == '5' || valOptional == '6' || valOptional == '7' || valOptional == '8' || valOptional == '9' || valOptional == '0'){
-                        if(valueInt.equals(" ")){
-                            valueInt = String.valueOf(valOptional);
-                        }else{
-                            valueInt += String.valueOf(valOptional);
+                        for(int a = i;a < sc.length();a++){
+                            if(valueInt.equals(" ")){
+                            valueInt = String.valueOf(sc.charAt(a));
+                            }else{
+                            valueInt += String.valueOf(sc.charAt(a));
+                            }
                         }
                         value2 = new StringBuilder(valueInt);
                         valueDefault = Integer.parseInt(valueInt);
